@@ -333,10 +333,10 @@ class DownloadCLI:
             except Exception as e:
                 self.console.print(f"[red]Error: {str(e)}[/red]")
                 continue
-
 def main():
     """Entry point"""
     cli = DownloadCLI()
+    print_banner()  # Ensure banner is printed before starting the CLI
     try:
         asyncio.run(cli.run())
     except KeyboardInterrupt:
